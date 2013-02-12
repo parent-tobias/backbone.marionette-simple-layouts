@@ -1,0 +1,6 @@
+@import url('le-frog/jquery-ui.css');
+
+#content {
+	margin-top: 10px;
+	width: 400px;
+}
