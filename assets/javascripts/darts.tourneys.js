@@ -1,6 +1,6 @@
 jQuery(function() {
     // Set up the main Events Manager Application
-	window.DartsLeague = {};
+    window.DartsLeague = {};
 	DartsLeague.Models = {};
 	DartsLeague.Collections = {};
 	DartsLeague.Views = {};
@@ -31,11 +31,11 @@ jQuery(function() {
 	//    be identified as 'teamMembers'.
 	//-------------------------------------------------------------
 	DartsLeague.Models.Member = Backbone.Model.extend({
-		urlRoot: '/index.php/api/members',
+
 	});
 	DartsLeague.Collections.Members = Backbone.Collection.extend({
 		model: DartsLeague.Models.Member,
-		url: '/index.php/api/members'
+
 	});
 	
 	//-------------------------------------------------------------
@@ -63,7 +63,7 @@ jQuery(function() {
 	//    instance.
 	//-------------------------------------------------------------
 	DartsLeague.Models.Game = Backbone.Model.extend({
-		urlRoot: '/index.php/api/games',
+
 	});
 	
 	//-------------------------------------------------------------
@@ -73,7 +73,7 @@ jQuery(function() {
 	//    TeamMembers (an instance of the Member collection).
 	//-------------------------------------------------------------
 	DartsLeague.Models.TourneyGame = Backbone.Model.extend({
-		urlRoot: '/index.php/api/eventgames',
+
 		initialize: function(){
 			var game = new DartsLeague.Models.Game(this.get('game'));
 			var teams = new DartsLeague.Collections.Teams(this.get('teams'));
@@ -93,7 +93,7 @@ jQuery(function() {
 	//    about the event itself.
 	//-------------------------------------------------------------
 	DartsLeague.Models.Tourney = Backbone.Model.extend({
-		urlRoot: '/index.php/api/events',
+
 		initialize: function(){
 			var tourneyGames = new DartsLeague.Collections.TourneyGames(this.get('eventGames'));
 			this.set('tourneyGames', tourneyGames);
@@ -101,6 +101,6 @@ jQuery(function() {
 	});
 	DartsLeague.Collections.Tourneys = Backbone.Collection.extend({
 		model: DartsLeague.Models.Tourney,
-		url: '/index.php/api/events',
+		url: './assets/json/mock-darts-tourneys.json',
 	});
 });

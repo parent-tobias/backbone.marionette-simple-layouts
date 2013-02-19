@@ -16,9 +16,18 @@
         <link url="./assets/css/darts.tourneys.css" />
     </head>
     <body>
-        <div id="mainContent"></div>
+        <article id="mainContent"></article>
         <footer></footer>
         
-        
+    	<script type="text/javascript">
+			$(document).ready(function(){
+				DartsLeague.TourneysApp.addInitializer(function(options) {
+					DartsLeague.tourneyCollection = new DartsLeague.Collections.Tourneys();
+					DartsLeague.tourneyCollection.fetch();
+				});
+				
+				DartsLeague.TourneysApp.start();
+			});
+		</script>
     </body>
 </html>
