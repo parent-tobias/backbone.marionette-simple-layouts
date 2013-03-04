@@ -114,6 +114,7 @@ jQuery(function() {
     //    create at the topmost level of this particular app.
     DartsLeague.Views.TourneyManagerLayout = Backbone.Marionette.Layout.extend({
         template: "#tourney-manager-layout",
+        className: "outer-center",
         
         regions: {
             tourneyListing: "#tourney-manager-listing",
