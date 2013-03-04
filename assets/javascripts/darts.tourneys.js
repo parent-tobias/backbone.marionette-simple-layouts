@@ -114,5 +114,11 @@ jQuery(function() {
     //    create at the topmost level of this particular app.
     DartsLeague.Views.TourneyManagerLayout = Backbone.Marionette.Layout.extend({
         template: "#tourney-manager-layout",
+        
+        regions: {
+            tourneyListing: "#tourney-manager-listing",
+            tourneyDetails: "#tourney-manager-details",
+            status: "#tourney-manager-status"
+        }
     });
 });
