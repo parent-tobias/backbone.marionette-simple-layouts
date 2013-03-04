@@ -121,4 +121,14 @@ jQuery(function() {
             status: "#tourney-manager-status"
         }
     });
+    
+    DartsLeague.Views.TourneysListing = Backbone.Marionette.CollectionView.extend({
+        tagName: "ul",
+        itemView: DartsLeague.Views.TourneyListing,
+    });
+    
+    DartsLeague.Views.TourneyListing = Backbone.Marionette.ItemView.extend({
+        tagName: "li",
+        template: "#tourney-listing-template", 
+    });
 });
