@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-# README for a newly created project.
+Nested Views with Backbone and Marionette
+===============================================
 
-There are a couple of things you should do first, before you can use all of Git's power:
+This is the codebase for the second in a series of Backbone/Marionette tutorials. The first, [http://snowmonkey.parentleafarm.com/blog/2013/02/creating-a-deeply-nested-model-with-backbone-js/] (http://snowmonkey.parentleafarm.com/blog/2013/02/creating-a-deeply-nested-model-with-backbone-js/), dealt with deeply nested models in Backbone. This one, [http://snowmonkey.parentleafarm.com/blog/2013/02/views-with-deeply-nested-models/] (http://snowmonkey.parentleafarm.com/blog/2013/02/views-with-deeply-nested-models/), deals with the views that will be rendered, in keeping with said nested model.
 
-  * Add a remote to this project: in the Cloud9 IDE command line, you can execute the following commands
-    `git remote add [remote name] [remote url (eg. 'git@github.com:/ajaxorg/node_chat')]` [Enter]
-  * Create new files inside your project
-  * Add them to to Git by executing the following command
-    `git add [file1, file2, file3, ...]` [Enter]
-  * Create a commit which can be pushed to the remote you just added
-    `git commit -m 'added new files'` [Enter]
-  * Push the commit the remote
-    `git push [remote name] master` [Enter]
+The live result can be found here: [http://snowmonkey.parentleafarm.com/nested-layout/] (http://snowmonkey.parentleafarm.com/nested-layout/)
 
-That's it! If this doesn't work for you, please visit the excellent resources from [Github.com](http://help.github.com) and the [Pro Git](http://http://progit.org/book/) book.
-If you can't find your answers there, feel free to ask us via Twitter (@cloud9ide), [mailing list](groups.google.com/group/cloud9-ide) or IRC (#cloud9ide on freenode).
+This tutorial will be part of a larger work, taking the process of building a complex, nested, single-page app with Backbone and Marionette. The purposes of this particular step are:
 
-Happy coding!
-=======
-backbone.marionette-simple-layouts
-==================================
->>>>>>> c129e43a05a93eef6ab707aeb6ee4e6263d2e330
+* To introduce some of the visual components of the target
+* Examine the different view classes Marionette provides, and how they differ
+* Look at a simple example of using Marionette's event aggregator, and why it matters
