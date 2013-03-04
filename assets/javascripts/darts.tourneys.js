@@ -8,7 +8,8 @@ jQuery(function() {
 	DartsLeague.TourneysApp = new Backbone.Marionette.Application({});
 	
 	DartsLeague.TourneysApp.addRegions({
-		appMain: "#mainContent",
+		appMain: "#main-content",
+        modalRegion: "#modal-dialog"
 	});
 	
 	DartsLeague.TourneysApp.on("initialize:after", function(options){
