@@ -25,12 +25,17 @@
     	<script type="text/javascript">
 			$(document).ready(function(){
 				DartsLeague.TourneysApp.addInitializer(function(options) {
+                    // Fetch and set up the Tourney Collection
 					DartsLeague.tourneyCollection = new DartsLeague.Collections.Tourneys();
 					DartsLeague.tourneyCollection.fetch();
                     
+                    // Start the application's top-level regions
                     var tourneyManager = new DartsLeague.Views.TourneyManagerLayout();
-                    
                     DartsLeague.TourneysApp.appMain.show(tourneyManager);
+                    
+                    // Within that top-level region, show the listing of the tourneys
+    				tourneyManager.tourneyListing.show(new DartsLeague.Views.TourneysListing({collection: DartsLeague.tourneyCollection}));
+                    
 				});
 				
 				DartsLeague.TourneysApp.start();
