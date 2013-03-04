@@ -1,1 +1,2 @@
 {"ts":1361307627035,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1362431855939,"patch":[[{"diffs":[[1,"@import url('./le-frog/jquery.ui.theme.css');\r\n@import url('./le-frog/jquery-ui.css');\r\n\r\nbody article#main-content {\r\n    height: 600px;\r\n\tfont-size: .85em;\r\n}\r\n#tourney-manager-listing footer {\r\n\tposition: absolute;\r\n\tbottom: 0;\r\n}\r\n"]],"start1":0,"start2":0,"length1":0,"length2":235}]],"length":235,"saved":false}
