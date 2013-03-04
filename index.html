@@ -27,10 +27,25 @@
 				DartsLeague.TourneysApp.addInitializer(function(options) {
 					DartsLeague.tourneyCollection = new DartsLeague.Collections.Tourneys();
 					DartsLeague.tourneyCollection.fetch();
+                    
+                    var tourneyManager = new DartsLeague.Views.TourneyManagerLayout();
+                    
+                    DartsLeague.TourneysApp.appMain.show(tourneyManager);
 				});
 				
 				DartsLeague.TourneysApp.start();
 			});
 		</script>
+        
+    	<script type="text/template" id="tourney-manager-layout">
+			<nav class="tourney-nav"></nav>
+			<section id="tourney-manager-listing" class="middle-west">
+			</section>
+			<section id="tourney-manager-detail" class="middle-center">
+			</section>
+			<footer id="tourney-manager-status" class="middle-south">
+			</footer>
+		</script>
+
     </body>
 </html>

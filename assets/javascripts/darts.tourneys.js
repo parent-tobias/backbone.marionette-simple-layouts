@@ -104,4 +104,15 @@ jQuery(function() {
 		model: DartsLeague.Models.Tourney,
 		url: './assets/json/mock-darts-tourneys.json',
 	});
+    
+    /**************************************************************
+     * DartsLeague Tourney App Views
+     * 
+     *************************************************************/
+     
+    // TourneyManagerLayout -- a layout containing all the sub-regions we'll
+    //    create at the topmost level of this particular app.
+    DartsLeague.Views.TourneyManagerLayout = Backbone.Marionette.Layout.extend({
+        template: "#tourney-manager-layout",
+    });
 });
