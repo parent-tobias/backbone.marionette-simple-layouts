@@ -123,8 +123,10 @@ jQuery(function() {
         },
     	
 		initialize: function(){
+    		var that=this;
+			
 			DartsLeague.TourneysApp.vent.on("selectedTourney:changed", function(myTourney){
-				console.log(myTourney);
+				that.tourneyDetails.show(new DartsLeague.Views.TourneyDetails({model: myTourney}));
 			});
 		}
     });
