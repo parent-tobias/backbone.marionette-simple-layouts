@@ -120,17 +120,39 @@ jQuery(function() {
             tourneyListing: "#tourney-manager-listing",
             tourneyDetails: "#tourney-manager-details",
             status: "#tourney-manager-status"
-        }
+        },
+    	
+		initialize: function(){
+			DartsLeague.TourneysApp.vent.on("selectedTourney:changed", function(myTourney){
+				console.log(myTourney);
+			});
+		}
     });
      
     DartsLeague.Views.TourneyListing = Backbone.Marionette.ItemView.extend({
         tagName: "li",
         template: "#tourney-listing-template", 
-    });
+     			
+		initialize: function(){
+			_.bindAll(this);
+		},
+		
+		events: {
+			"click a": "showDetailedView"
+		},
+		
+		showDetailedView: function(){
+			DartsLeague.TourneysApp.vent.trigger("selectedTourney:changed", this.model);
+		}
+		   });
     
     DartsLeague.Views.TourneysListing = Backbone.Marionette.CollectionView.extend({
         tagName: "ul",
         itemView: DartsLeague.Views.TourneyListing,
     });
+        
+	DartsLeague.Views.TourneyDetails = Backbone.Marionette.ItemView.extend({
+		template: "#tourney-details-template"
+	});
 
 });

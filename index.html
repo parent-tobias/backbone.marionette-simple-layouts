@@ -74,6 +74,14 @@
         <script type="text/template" id="tourney-listing-template">
             <a href="#" id="tourney<%=id %>"><%= title %></a>
         </script>
+    		
+		<script type="text/template" id="tourney-specific-details-template">
+			<hgroup>
+				<h2><%= title %>: <%= location %></h2>
+		   		<h3><%= starts %></h3>
+			</hgroup>
+			<%= description %>
+		</script>
 
     </body>
 </html>
